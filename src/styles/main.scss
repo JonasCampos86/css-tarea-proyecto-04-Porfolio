@@ -24,7 +24,7 @@
 
 body {
   font-family: sans-serif;
-  color: v.$color-primary;
+  color: black;
 
   @include m.breakpoint(mobile) {
     font-size: 14px;
