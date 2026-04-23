@@ -11,7 +11,8 @@
 @use "components/header" as hd;
 @use "components/hero" as hr;
 @use "components/footer" as ft;
-
+@use "components/information" as if;
+@use "components/buttons" as bt;
 
 // ============================
 // BASE
@@ -25,6 +26,7 @@
 body {
   font-family: sans-serif;
   color: black;
+  background-color: v.$black;
 
   @include m.breakpoint(mobile) {
     font-size: 14px;
@@ -47,14 +49,41 @@ body {
 
 // ============================
 // Recomendaciones para hacerlo lo mejor posible:
-// .container{
-//    width: 1920px;
-//    margin-left: auto;
-//    margin-right: auto;
-//    padding-left: 160px;
-//    padding-right: 160px
-//  } 
+ .container{
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px
+ } 
 //   Y mucha paciencia Jonás, que eres capaz de muchas cosas, solo cree en TI
 // ============================
+
+
+
+//Atributos comunes en de los iconos
+
+.fa-brands{
+  color: v.$white;
+  transition: color 0.3s ease;
+
+  &:hover{
+    color: v.$celeste;
+  }
+
+}
+
+.icon--frontendmentor{
+  width: 22px;
+  height: 17px;
+  fill:v.$white ;
+  transition: fill 0.3s ease;
+
+  &:hover{
+    fill: v.$celeste;
+  }
+
+}
+
 
 
