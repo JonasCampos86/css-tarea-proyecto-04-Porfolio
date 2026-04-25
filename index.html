@@ -180,15 +180,16 @@
         how I could help. Please fill in the form, and 
         I’ll get back to you as soon as possible.
         </p>
-        <form action="/registrar-cliente/" name="registro" method="get" autocomplete="on">
-        <label for="name">NAME</label>
-        <input type="text" id="name" name="name"> 
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email">
-        <label for="msn">MESSAGE</label>
-        <textarea name="message" id="msn"></textarea>
+        <form action="/registrar-cliente/" name="registro" method="get" novalidate autocomplete="off">
+        <label for="name" class="visually-hidden">NAME</label>
+        <input type="text" id="name" name="name"  placeholder="NAME"> 
+        <label for="email" class="visually-hidden">EMAIL</label>
+        <input type="email" id="email" name="email" placeholder="EMAIL">
+        <span class="error-message">Sorry, invalid format here</span>
+        <label for="msn" class="visually-hidden">MESSAGE</label>
+        <textarea name="message" id="msn" placeholder="MESSEGE" ></textarea>
         <br>  
-        <button>SEND MESSAGE</button>
+        <button >SEND MESSAGE</button>
         </form>
         <hr>
         <div class="logotype">

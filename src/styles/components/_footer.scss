@@ -1,2 +1,183 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins'    as m;
+
+
+footer{
+
+    background-color: v.$greydark;
+    align-items: center;
+
+    .title__footer{
+        padding-top: 60px;
+        color: v.$white;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1.14px;
+        line-height: 40px;
+
+    }
+    .subtitle__footer{
+        padding-top: 20px;
+        color: v.$grey;
+        text-align: center;
+        font-size:18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0px;
+        width: 96%;
+        position: relative;
+        &::before{
+            content: "";
+            position:absolute;
+            z-index:0 ;
+            color: v.$white;
+            width:100%;
+            height: 100%;
+            background-image: url("/oval-mobile.svg");
+            background-repeat: no-repeat;
+            bottom: -290px;
+            right: 16px;
+           
+            
+                
+        }
+
+    }
+
+    form{
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        color: v.$grey;
+        max-width:95% ;
+        margin:  0 auto;
+        
+        label{
+            
+            padding-top:32px ;
+            padding-left:24px ;
+            color: v.$grey;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0.22px;
+
+        }
+        
+        input,textarea{
+            z-index: 2;
+            font-family: v.$font-primary;
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 1px solid v.$white ;
+            background: transparent;
+            color: v.$white;
+            font-weight: 16px ;
+            font-weight: 500;
+            letter-spacing: -0.22px;
+            line-height: 26px;
+            transition: border-color 0.3s ease;
+            
+            &::placeholder{
+                color: v.$grey;
+                opacity: 0.6;
+                padding-left: 20px;
+                font-weight: 300;
+            }
+
+            &:focus{
+                outline: none;
+                border: none;
+                border-bottom: 1px solid v.$celeste ;
+
+            }
+            &:invalid{
+                border-bottom: 1px solid v.$orange ;
+            }
+            &:placeholder-shown:invalid{
+                border-bottom: 1px solid v.$white ;
+            }
+        }
+       
+        .error-message{
+            display: none;
+            color:v.$orange;
+            font-size: 10px;
+            margin-top: 5px;
+            margin-left: 214px;
+        }
+        input:invalid:not(:placeholder-shown)+ .error-message{
+            display: block;
+        }
+
+        button{
+            margin-top: 32px;
+            margin-bottom: 99px;
+            position: relative;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: v.$white;
+            font-family: v.$font-primary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 2.29px;
+            width: 200px;
+            left: 155px;
+            
+
+
+            &::before{
+                content: "";
+                position: absolute;
+                width:70%;
+                height: 2px;
+                background-color: v.$celeste;
+                size: 3px;
+                top: 30px;
+
+                }
+                &:hover{
+                  color: v.$celeste;
+            }
+
+            
+            
+            
+        }
+
+        
+    }
+
+    
+    .logotype{
+        text-align: center;
+     
+        padding-top: 39px;
+
+    }
+
+    .nav__principal{
+        
+        margin-top: 20px;
+        padding-bottom: 60px;
+        ul{
+            
+            display: flex;
+            justify-content: center;
+            gap: 26px;
+            @include m.reset-list()
+            
+            
+            
+        }
+        
+    }
+
+
+}
+
