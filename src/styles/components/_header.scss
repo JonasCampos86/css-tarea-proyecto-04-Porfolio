@@ -15,6 +15,11 @@ header .container{
         align-content: center;
         margin: 30px;
     }
+    @include m.breakpoint(desktop-xl){
+        margin-top: 39px;
+        margin-left: 165px;
+        margin-right: 195px;
+    }
 
     .logotype{
         @include m.breakpoint(tablet){

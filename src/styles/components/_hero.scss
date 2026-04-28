@@ -13,6 +13,10 @@
         align-items: start;
         padding-top: 90px;
     }
+    @include m.breakpoint(desktop-xl){
+        padding-top: 140px;
+        margin-left: 135px;
+    }
     
     .adampicture{
         position: relative;
@@ -20,6 +24,10 @@
         @include m.breakpoint(tablet){
             top: -95px;
             right: -16px;
+        }
+        @include m.breakpoint(desktop-xl){
+            top: -181px;
+            right: 135px;
         }
         &::before{
                 content: "";
@@ -39,6 +47,12 @@
                     top: 70px;
                     right: 478px;
                 }
+
+                @include m.breakpoint(desktop-xl){
+                    background-image: url("/oval-desktop.svg");
+                    top:133px;
+                    left: -833px;
+                }
         }
         &::after{
             content: "";
@@ -55,6 +69,11 @@
                 z-index: 0;
                 top: 470px;
                 left: 252px;
+            }
+
+            @include m.breakpoint(desktop-xl){
+                top: 508px;
+                left: -66px;
             }
         }    
     }//adampicture
@@ -78,6 +97,13 @@
             letter-spacing: -2.05px;
 
         }
+        @include m.breakpoint(desktop-xl){
+            width: 100%;
+            font-size: 88px;
+            line-height: 88px;
+            letter-spacing: -2.5px;
+            margin-top: 18px;
+        }
 
         span{
             position:relative;
@@ -90,6 +116,11 @@
             background-color: v.$celeste;
             size: 3px;
             bottom:0;
+            @include m.breakpoint(desktop-xl){
+                bottom:6px;
+                size: 4px;
+                z-index: -1;
+            }
 
         }
         
@@ -98,6 +129,9 @@
         display: none;
             @include m.breakpoint(tablet){
                 display: inline;
+            }
+            @include m.breakpoint(desktop-xl){
+                display: none;
             }
             
         }
@@ -128,6 +162,11 @@
             letter-spacing: 0px;
         }
 
+        @include m.breakpoint(desktop-xl){
+            width: 55%;
+            padding-top: 30px;
+        }
+
     }//description
     .contact{
         margin-top: 24px;
@@ -136,6 +175,10 @@
             position:absolute;
             bottom: 160px;
             left: 30px;
+        }
+        @include m.breakpoint(desktop-xl){
+            bottom: 550px;
+            left: 160px;
         }
     }
 
@@ -152,6 +195,12 @@
         display: grid;
         grid-template-columns:1fr 1fr ;
         grid-template-rows: auto auto;
+    }
+    @include m.breakpoint(desktop-xl){
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows: auto auto auto; 
+        padding-left: 130px; 
+        gap: 48px;
     }
     
     
@@ -204,6 +253,11 @@
         @include m.breakpoint(tablet){
             top: 27px;
             right: -512px; 
+        }
+        @include m.breakpoint(desktop-xl){
+            background-image: url("/linesRighit-desktop.svg");
+            top: 9px;
+            right: -582px; 
         }
             
     }    

@@ -25,6 +25,7 @@
   <header>
     <div class="container">
       <div class="logotype">
+        <source media="(min-width: 1440px)" srcset="/adamkeyes-xl.svg">
         <img src="/adamkeyes-logo-mobile.svg" alt="logo">
       </div>
       <nav class="nav__principal">
@@ -113,7 +114,6 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="/e-learning-page-desktop.svg">
               <img src="/e-learning-page-mobile.svg" alt="e learning page">
-              
             </picture>
             <h4>E-LEARNING LANDING PAGE</h4>
             <div class="technologies">
@@ -168,7 +168,6 @@
             <div class="technologies">
               <p>HTML</p><p>CSS</p><p>JAVASCRIPT</p>
             </div>
-            
             <a class="contact" href="#">VIEW PROJECT</a> <a class="contact" href="#">VIEW CODE</a>
           </article>
         </div>
@@ -176,12 +175,14 @@
     </div>
     <footer>
       <div class="container">
-        <h2 class="title__footer">Contact</h2>
-        <p class="subtitle__footer">
+        <div class="info__footer">
+          <h2 class="title__footer">Contact</h2>
+          <p class="subtitle__footer">
         I would love to hear about your project and 
         how I could help. Please fill in the form, and 
         I’ll get back to you as soon as possible.
-        </p>
+          </p>
+        </div>
         <form action="/registrar-cliente/" name="registro" method="get" novalidate autocomplete="off">
         <label for="name" class="visually-hidden">NAME</label>
         <input type="text" id="name" name="name"  placeholder="NAME"> 
@@ -193,8 +194,10 @@
         <br>  
         <button >SEND MESSAGE</button>
         </form>
-        <hr>
-        <div class="ending">
+        
+      </div>
+      <hr>
+      <div class="ending">
           <div class="logotype">
           <img src="/adamkeyes-logo-mobile.svg" alt="logo">
           </div>
@@ -209,8 +212,8 @@
           <li><a href="#" aria-label="Twitter profile"> <i class="fa-brands fa-twitter"></i></a></li>
         </ul>
           </nav>
-        </div>
       </div>
+      
     </footer>
   </body>
   

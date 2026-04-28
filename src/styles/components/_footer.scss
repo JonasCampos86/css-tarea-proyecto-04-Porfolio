@@ -8,6 +8,23 @@ footer{
     font-family: v.$font-primary;
     align-items: center;
 
+
+    .container{
+        @include m.breakpoint(desktop-xl){
+            display: flex;
+            flex-direction: row;
+
+        }
+
+    }
+    
+
+
+
+    
+
+
+
     .title__footer{
         padding-top: 60px;
         color: v.$white;
@@ -21,6 +38,14 @@ footer{
             letter-spacing: -2.05px;
             line-height: 72px;
         }
+        @include m.breakpoint(desktop-xl){
+            padding-left: 170px;
+            text-align: start;
+            font-size: 88px;
+            letter-spacing: -2.5px;
+            line-height: 88px;
+        }
+
 
     }
     .subtitle__footer{
@@ -40,6 +65,14 @@ footer{
             letter-spacing: 0px;
             line-height: 28px;
         }
+
+        @include m.breakpoint(desktop-xl){
+            padding-top: 40px;
+            left: 50px;
+            text-align: start;
+            width: 66%;
+        }
+
         &::before{
             content: "";
             position:absolute;
@@ -57,6 +90,11 @@ footer{
                 bottom: -364px;
                 right: 262px;
             }
+            @include m.breakpoint(desktop-xl){
+                
+                bottom: -240px;
+                right: 182px;
+            }
            
             
                 
@@ -73,6 +111,15 @@ footer{
         margin:  0 auto;
         @include m.breakpoint(tablet){
             width: 60%;
+        }
+        @include m.breakpoint(desktop-xl){
+            
+            margin-right: 160px;
+            padding-left: 120px;
+            margin-bottom: 117px;
+            gap: 30px;
+            
+            
         }
         
         label{
@@ -101,6 +148,9 @@ footer{
             letter-spacing: -0.22px;
             line-height: 26px;
             transition: border-color 0.3s ease;
+            @include m.breakpoint(desktop-xl){
+                    margin-bottom: 20px;
+            }
             
             &::placeholder{
                 color: v.$grey;
@@ -174,6 +224,12 @@ footer{
             @include m.breakpoint(tablet){
                margin-left: 120px;
             }
+            
+            @include m.breakpoint(desktop-xl){
+               margin-left: 120px;
+               margin-top: 0;
+               margin-bottom: 0;
+            }
 
             
             
@@ -193,7 +249,11 @@ footer{
             align-items: center;
             
         }
-
+        @include m.breakpoint(desktop-xl){
+            margin-left: 140px;
+            margin-right: 140px;
+            padding-bottom: 50px;
+        }
 
 
         .logotype{
